@@ -1,0 +1,30 @@
+{
+  "name": "mcp-suite",
+  "private": true,
+  "description": "Suite completa di MCP server per sviluppatori",
+  "scripts": {
+    "build": "turbo run build",
+    "build:packages": "turbo run build --filter='./packages/*'",
+    "build:servers": "turbo run build --filter='./servers/*'",
+    "test": "turbo run test",
+    "test:unit": "turbo run test:unit",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write '**/*.{ts,json,md}'",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --parallel"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.2",
+    "prettier": "^3.4.0",
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.29.1"
+}

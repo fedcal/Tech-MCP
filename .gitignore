@@ -1,0 +1,41 @@
+.claude
+CLAUDE.md
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test
+coverage/
+
+# Turborepo
+.turbo/
+
+# pnpm
+.pnpm-store/
+
+# SQLite databases (runtime data)
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log

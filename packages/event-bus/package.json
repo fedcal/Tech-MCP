@@ -1,0 +1,23 @@
+{
+  "name": "@mcp-suite/event-bus",
+  "version": "0.1.0",
+  "description": "Typed event bus for inter-server collaboration",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.9",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

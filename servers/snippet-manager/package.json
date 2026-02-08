@@ -1,0 +1,32 @@
+{
+  "name": "@mcp-suite/server-snippet-manager",
+  "version": "0.1.0",
+  "description": "MCP server: snippet-manager",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-snippet-manager": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@mcp-suite/core": "workspace:*",
+    "@mcp-suite/database": "workspace:*",
+    "@mcp-suite/event-bus": "workspace:*",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@mcp-suite/testing": "workspace:*",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

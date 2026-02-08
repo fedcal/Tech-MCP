@@ -1,0 +1,26 @@
+{
+  "name": "@mcp-suite/cli",
+  "version": "0.1.0",
+  "description": "CLI tool for managing MCP Suite servers",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-suite": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mcp-suite/core": "workspace:*",
+    "@mcp-suite/event-bus": "workspace:*",
+    "@mcp-suite/client-manager": "workspace:*",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
