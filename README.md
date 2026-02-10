@@ -1,3 +1,7 @@
+[Italiano](#mcp-suite) | [English](#mcp-suite-en)
+
+---
+
 # MCP Suite
 
 **Una suite completa di 22 server MCP (Model Context Protocol) per la produttivita dello sviluppatore.**
@@ -197,6 +201,8 @@ mcp-suite/
 │   └── environment-manager/   # Gestione .env
 │
 ├── docs/                      # Documentazione completa
+│   ├── it/                    # Documentazione in italiano
+│   └── en/                    # Documentation in English
 ├── pnpm-workspace.yaml        # Configurazione workspace
 ├── turbo.json                 # Build orchestration
 └── tsconfig.base.json         # Config TypeScript condivisa
@@ -233,7 +239,7 @@ time-tracking                      project-economics
      |-- time:entry-logged --------------> |  (converte in costo)
 ```
 
-Vedi [docs/14-collaborazione-inter-server/](docs/14-collaborazione-inter-server/) per la matrice completa.
+Vedi [docs/it/14-collaborazione-inter-server/](docs/it/14-collaborazione-inter-server/) per la matrice completa.
 
 ---
 
@@ -278,40 +284,349 @@ pnpm clean
 
 ## Documentazione
 
-La documentazione completa e nella cartella [`docs/`](docs/):
+La documentazione completa e disponibile in due lingue:
+
+### Italiano ([docs/it/](docs/it/))
 
 | Sezione | Contenuto |
 |---------|-----------|
-| [01 - Introduzione a MCP](docs/01-introduzione-mcp/) | Teoria del protocollo, concetti fondamentali |
-| [02 - Architettura](docs/02-architettura/) | Design del monorepo, pattern, decisioni |
-| [03 - Installazione](docs/03-installazione/) | Guida passo-passo per Windows, macOS, Linux |
-| [04 - Configurazione](docs/04-configurazione/) | Claude Desktop, variabili ambiente, trasporti |
-| [05 - Pacchetti Condivisi](docs/05-pacchetti-condivisi/) | Core, EventBus, Database, Testing, CLI |
-| [06 - Server Produttivita](docs/06-server-produttivita/) | code-review, dependency-manager, project-scaffolding |
-| [07 - Server DevOps](docs/07-server-devops/) | docker-compose, log-analyzer, cicd-monitor |
-| [08 - Server Database](docs/08-server-database/) | db-schema-explorer, data-mock-generator |
-| [09 - Server Documentazione](docs/09-server-documentazione/) | api-documentation, codebase-knowledge |
-| [10 - Server Testing](docs/10-server-testing/) | test-generator, performance-profiler |
-| [11 - Server Utility](docs/11-server-utility/) | regex-builder, http-client, snippet-manager |
-| [12 - Server Project Management](docs/12-server-project-management/) | scrum-board, agile-metrics, time-tracking, economics, retro |
-| [13 - Server Comunicazione](docs/13-server-comunicazione/) | standup-notes, environment-manager |
-| [14 - Collaborazione Inter-Server](docs/14-collaborazione-inter-server/) | EventBus, matrice eventi, pattern |
-| [15 - Sviluppi Futuri](docs/15-sviluppi-futuri/) | Roadmap, contributi, idee |
+| [01 - Introduzione a MCP](docs/it/01-introduzione-mcp/) | Teoria del protocollo, concetti fondamentali |
+| [02 - Architettura](docs/it/02-architettura/) | Design del monorepo, pattern, decisioni |
+| [03 - Installazione](docs/it/03-installazione/) | Guida passo-passo per Windows, macOS, Linux |
+| [04 - Configurazione](docs/it/04-configurazione/) | Claude Desktop, variabili ambiente, trasporti |
+| [05 - Pacchetti Condivisi](docs/it/05-pacchetti-condivisi/) | Core, EventBus, Database, Testing, CLI |
+| [06 - Server Produttivita](docs/it/06-server-produttivita/) | code-review, dependency-manager, project-scaffolding |
+| [07 - Server DevOps](docs/it/07-server-devops/) | docker-compose, log-analyzer, cicd-monitor |
+| [08 - Server Database](docs/it/08-server-database/) | db-schema-explorer, data-mock-generator |
+| [09 - Server Documentazione](docs/it/09-server-documentazione/) | api-documentation, codebase-knowledge |
+| [10 - Server Testing](docs/it/10-server-testing/) | test-generator, performance-profiler |
+| [11 - Server Utility](docs/it/11-server-utility/) | regex-builder, http-client, snippet-manager |
+| [12 - Server Project Management](docs/it/12-server-project-management/) | scrum-board, agile-metrics, time-tracking, economics, retro |
+| [13 - Server Comunicazione](docs/it/13-server-comunicazione/) | standup-notes, environment-manager |
+| [14 - Collaborazione Inter-Server](docs/it/14-collaborazione-inter-server/) | EventBus, matrice eventi, pattern |
+| [15 - Sviluppi Futuri](docs/it/15-sviluppi-futuri/) | Roadmap, contributi, idee |
+| [16 - Guida Creazione Server/Client](docs/it/16-guida-creazione-server-client/) | Tutorial completo dalla teoria alla produzione |
+
+### English ([docs/en/](docs/en/))
+
+| Section | Content |
+|---------|---------|
+| [01 - Introduction to MCP](docs/en/01-introduction-to-mcp/) | Protocol theory, core concepts |
+| [02 - Architecture](docs/en/02-architecture/) | Monorepo design, patterns, decisions |
+| [03 - Installation](docs/en/03-installation/) | Step-by-step guide for Windows, macOS, Linux |
+| [04 - Configuration](docs/en/04-configuration/) | Claude Desktop, environment variables, transports |
+| [05 - Shared Packages](docs/en/05-shared-packages/) | Core, EventBus, Database, Testing, CLI |
+| [06 - Productivity Servers](docs/en/06-productivity-servers/) | code-review, dependency-manager, project-scaffolding |
+| [07 - DevOps Servers](docs/en/07-devops-servers/) | docker-compose, log-analyzer, cicd-monitor |
+| [08 - Database Servers](docs/en/08-database-servers/) | db-schema-explorer, data-mock-generator |
+| [09 - Documentation Servers](docs/en/09-documentation-servers/) | api-documentation, codebase-knowledge |
+| [10 - Testing Servers](docs/en/10-testing-servers/) | test-generator, performance-profiler |
+| [11 - Utility Servers](docs/en/11-utility-servers/) | regex-builder, http-client, snippet-manager |
+| [12 - Project Management Servers](docs/en/12-project-management-servers/) | scrum-board, agile-metrics, time-tracking, economics, retro |
+| [13 - Communication Servers](docs/en/13-communication-servers/) | standup-notes, environment-manager |
+| [14 - Inter-Server Collaboration](docs/en/14-inter-server-collaboration/) | EventBus, event matrix, patterns |
+| [15 - Future Developments](docs/en/15-future-developments/) | Roadmap, contributions, ideas |
+| [16 - Server/Client Creation Guide](docs/en/16-server-client-creation-guide/) | Complete tutorial from theory to production |
 
 ---
 
-## Licenza
+## Licenza / License
 
 MIT
 
 ---
 
-## Contribuire
+## Contribuire / Contributing
 
-I contributi sono benvenuti! Vedi [docs/15-sviluppi-futuri/](docs/15-sviluppi-futuri/) per la roadmap e le aree dove serve aiuto.
+I contributi sono benvenuti! Vedi [docs/it/15-sviluppi-futuri/](docs/it/15-sviluppi-futuri/) per la roadmap e le aree dove serve aiuto.
 
-1. Fai fork del repository
-2. Crea un branch (`git checkout -b feature/nuova-feature`)
-3. Committa le modifiche (`git commit -m 'Aggiungi nuova feature'`)
-4. Pusha il branch (`git push origin feature/nuova-feature`)
-5. Apri una Pull Request
+Contributions are welcome! See [docs/en/15-future-developments/](docs/en/15-future-developments/) for the roadmap and areas where help is needed.
+
+1. Fai fork del repository / Fork the repository
+2. Crea un branch / Create a branch (`git checkout -b feature/new-feature`)
+3. Committa le modifiche / Commit your changes (`git commit -m 'Add new feature'`)
+4. Pusha il branch / Push the branch (`git push origin feature/new-feature`)
+5. Apri una Pull Request / Open a Pull Request
+
+---
+---
+
+<a id="mcp-suite-en"></a>
+
+# MCP Suite (EN)
+
+**A complete suite of 22 MCP (Model Context Protocol) servers for developer productivity.**
+
+MCP Suite is a TypeScript monorepo that provides intelligent tools for every aspect of the software development lifecycle: from code management to Scrum/Agile project management, from project economics to everyday utilities. All servers communicate with each other through a typed event system.
+
+---
+
+## Overview
+
+| Info | Value |
+|------|-------|
+| **MCP Servers** | 22 |
+| **Total Tools** | 85+ |
+| **Shared Packages** | 6 |
+| **Typed Events** | 29 |
+| **Language** | TypeScript |
+| **SDK** | `@modelcontextprotocol/sdk` v1.x |
+| **Storage** | SQLite (via `better-sqlite3`) |
+| **Transport** | STDIO (compatible with Claude Desktop, Cursor, VS Code) |
+| **Build** | pnpm workspaces + Turborepo |
+
+---
+
+## Architecture
+
+```
+                    +------------------+
+                    |   Claude Desktop |
+                    |   Cursor / IDE   |
+                    +--------+---------+
+                             |
+                        STDIO Transport
+                             |
+              +--------------+--------------+
+              |                             |
+    +---------v---------+       +-----------v-----------+
+    |   MCP Server #1   |       |    MCP Server #2      |
+    |   (scrum-board)   |       |    (time-tracking)    |
+    +---------+---------+       +-----------+-----------+
+              |                             |
+              +---------- EventBus ---------+
+              |         (pub/sub)           |
+              v                             v
+    +--------------------+       +--------------------+
+    |    SQLite DB       |       |    SQLite DB       |
+    |  scrum-board.db    |       |  time-tracking.db  |
+    +--------------------+       +--------------------+
+```
+
+Each server is independent and can be started individually. When they share the same EventBus, they automatically collaborate by exchanging typed events.
+
+---
+
+## The 22 Servers
+
+### Productivity & Code
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **code-review** | 3 | Diff analysis, cyclomatic complexity, improvement suggestions |
+| **dependency-manager** | 3 | Vulnerabilities, unused dependencies, license audit |
+| **project-scaffolding** | 3 | Project generation from templates (Node.js, Express, React, MCP) |
+
+### DevOps & Infrastructure
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **docker-compose** | 4 | YAML parsing, Dockerfile analysis, compose generation |
+| **log-analyzer** | 4 | Log analysis, error patterns, tail, summary |
+| **cicd-monitor** | 4 | GitHub Actions monitoring, logs, flaky tests |
+
+### Database & Data
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **db-schema-explorer** | 4 | SQLite schema exploration, index suggestions, Mermaid ERD |
+| **data-mock-generator** | 4 | Mock data generation in JSON, CSV with 16 generators |
+
+### Documentation
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **api-documentation** | 3 | Express/NestJS endpoint extraction, OpenAPI 3.0 generation |
+| **codebase-knowledge** | 4 | Code search, module analysis, architecture map, dependency graph |
+
+### Testing & Quality
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **test-generator** | 3 | Unit test generation, edge cases, coverage analysis |
+| **performance-profiler** | 3 | Bundle analysis, bottlenecks, comparative benchmarks |
+
+### Utility
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **regex-builder** | 5 | Build, test, explain, optimize regex |
+| **http-client** | 3 | HTTP requests, response comparison, curl generation |
+| **snippet-manager** | 5 | Snippet management with tags, search, SQLite storage |
+
+### Project Management (Scrum/Agile)
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **scrum-board** | 7 | Sprints, user stories, tasks, Kanban board |
+| **agile-metrics** | 4 | Velocity, burndown, cycle time, Monte Carlo forecast |
+| **time-tracking** | 4 | Timer, manual logging, timesheet |
+| **project-economics** | 4 | Budget, costs, burn rate forecast |
+| **retrospective-manager** | 5 | Retros (mad-sad-glad, 4Ls, start-stop-continue), votes, action items |
+
+### Communication
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **standup-notes** | 3 | Daily standups, history, status reports |
+| **environment-manager** | 5 | .env file management, comparison, validation, templates |
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- **Node.js** >= 20.0.0
+- **pnpm** >= 9.0.0
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/user/mcp-suite.git
+cd mcp-suite
+
+# Install dependencies
+pnpm install
+
+# Build all packages and servers
+pnpm build
+```
+
+### Claude Desktop Configuration
+
+Add one or more servers to the Claude Desktop configuration file:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**Linux**: `~/.config/Claude/claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "scrum-board": {
+      "command": "node",
+      "args": ["/path/to/mcp-suite/servers/scrum-board/dist/index.js"]
+    },
+    "time-tracking": {
+      "command": "node",
+      "args": ["/path/to/mcp-suite/servers/time-tracking/dist/index.js"]
+    },
+    "code-review": {
+      "command": "node",
+      "args": ["/path/to/mcp-suite/servers/code-review/dist/index.js"]
+    }
+  }
+}
+```
+
+### Manually Starting a Single Server
+
+```bash
+# Start a specific server
+node servers/scrum-board/dist/index.js
+
+# Or use the CLI
+npx @mcp-suite/cli start scrum-board
+```
+
+---
+
+## Project Structure
+
+```
+mcp-suite/
+├── packages/                  # Shared libraries
+│   ├── core/                  # Server factory, types, config, logger
+│   ├── event-bus/             # Typed pub/sub with 29 events
+│   ├── client-manager/        # Server-to-server calls
+│   ├── database/              # SQLite wrapper + migrations
+│   ├── testing/               # Mock transport and event bus for tests
+│   └── cli/                   # CLI: start, list, status
+│
+├── servers/                   # 22 MCP Servers
+│   ├── scrum-board/           # Central project management hub
+│   ├── time-tracking/         # Time tracking
+│   ├── ...                    # (20 more servers)
+│   └── environment-manager/   # .env management
+│
+├── docs/                      # Full documentation
+│   ├── it/                    # Documentazione in italiano
+│   └── en/                    # Documentation in English
+├── pnpm-workspace.yaml        # Workspace configuration
+├── turbo.json                 # Build orchestration
+└── tsconfig.base.json         # Shared TypeScript config
+```
+
+Each server follows a uniform structure:
+
+```
+servers/<name>/
+├── package.json
+├── tsconfig.json
+└── src/
+    ├── index.ts               # Entry point
+    ├── server.ts              # Factory and tool registration
+    ├── tools/                 # One file per tool
+    ├── services/              # Business logic and store (optional)
+    └── collaboration.ts       # Cross-server event handlers (optional)
+```
+
+---
+
+## Inter-Server Collaboration
+
+Servers communicate through a **typed EventBus** with 29 defined events. When a server performs a significant action (e.g., sprint creation, time logging), it publishes an event that other servers can subscribe to.
+
+```
+scrum-board                          agile-metrics
+     |                                     |
+     |-- scrum:sprint-completed ---------> |  (updates velocity)
+     |-- scrum:task-updated -------------> |  (calculates cycle time)
+     |                                     |
+time-tracking                      project-economics
+     |                                     |
+     |-- time:entry-logged --------------> |  (converts to cost)
+```
+
+See [docs/en/14-inter-server-collaboration/](docs/en/14-inter-server-collaboration/) for the complete matrix.
+
+---
+
+## Useful Commands
+
+```bash
+# Full build
+pnpm build
+
+# Build shared packages only
+pnpm build:packages
+
+# Build servers only
+pnpm build:servers
+
+# Build a single server
+pnpm --filter @mcp-suite/server-scrum-board build
+
+# Type check
+pnpm typecheck
+
+# Code formatting
+pnpm format
+
+# Clean
+pnpm clean
+```
+
+---
+
+## Technologies
+
+- **TypeScript** - End-to-end static typing
+- **Model Context Protocol (MCP)** - Anthropic's open standard for tool-AI communication
+- **pnpm** - Fast package manager with workspace support
+- **Turborepo** - Build orchestration with caching
+- **SQLite** (better-sqlite3) - Zero-configuration local storage
+- **Zod** - Runtime schema validation
+- **Node.js EventEmitter** - In-process event bus
