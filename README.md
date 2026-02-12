@@ -330,23 +330,82 @@ La documentazione completa e disponibile in due lingue:
 
 ---
 
-## Licenza / License
+## Licenza
 
-MIT
+Questo progetto e distribuito sotto la **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+Questo significa che:
+- Puoi usare, modificare e distribuire liberamente questo software
+- Qualsiasi modifica o lavoro derivato **deve** essere rilasciato sotto la stessa licenza AGPL-3.0
+- Se esegui una versione modificata come **servizio di rete** (SaaS), devi rendere disponibile il codice sorgente agli utenti di quel servizio
+- Devi mantenere le note di copyright e licenza in tutte le copie
+
+Vedi il file [LICENSE](LICENSE) per il testo completo della licenza.
 
 ---
 
-## Contribuire / Contributing
+## Contribuire
 
-I contributi sono benvenuti! Vedi [docs/it/15-sviluppi-futuri/](docs/it/15-sviluppi-futuri/) per la roadmap e le aree dove serve aiuto.
+I contributi sono benvenuti! Questo progetto cresce grazie alla community.
 
-Contributions are welcome! See [docs/en/15-future-developments/](docs/en/15-future-developments/) for the roadmap and areas where help is needed.
+### Setup ambiente di sviluppo
 
-1. Fai fork del repository / Fork the repository
-2. Crea un branch / Create a branch (`git checkout -b feature/new-feature`)
-3. Committa le modifiche / Commit your changes (`git commit -m 'Add new feature'`)
-4. Pusha il branch / Push the branch (`git push origin feature/new-feature`)
-5. Apri una Pull Request / Open a Pull Request
+```bash
+# Fai fork e clona il repository
+git clone https://github.com/<tuo-utente>/mcp-suite.git
+cd mcp-suite
+
+# Installa le dipendenze
+pnpm install
+
+# Esegui la build completa
+pnpm build
+
+# Esegui i test
+pnpm test
+```
+
+### Come contribuire
+
+- **Segnalare bug**: apri una [issue](https://github.com/user/mcp-suite/issues) con una descrizione chiara, i passi per riprodurre il problema e il comportamento atteso
+- **Proporre feature**: apri una issue descrivendo la funzionalita, il caso d'uso e l'approccio proposto
+- **Inviare codice**: segui il processo PR descritto sotto
+
+### Processo Pull Request
+
+1. Fai fork del repository
+2. Crea un branch dal `master`:
+   - `feature/nome-feature` per nuove funzionalita
+   - `fix/nome-bug` per bug fix
+3. Scrivi codice seguendo le convenzioni del progetto
+4. Aggiungi o aggiorna i test per le tue modifiche
+5. Assicurati che `pnpm build` e `pnpm test` passino
+6. Committa con messaggi chiari e descrittivi
+7. Pusha il branch e apri una Pull Request
+
+### Convenzioni codice
+
+- **TypeScript** strict mode ovunque
+- Ogni server segue la struttura uniforme: `index.ts`, `server.ts`, `tools/`, `services/`, `collaboration.ts`
+- Pattern **EventBus**: parametro opzionale `eventBus?: EventBus`, pubblicazione fire-and-forget con `eventBus?.publish()`
+- Pattern **ClientManager**: parametro opzionale `clientManager?: McpClientManager` per chiamate cross-server
+- Validazione input con **Zod**
+- Storage con **SQLite** via `better-sqlite3`
+
+### Aggiungere un nuovo server
+
+Consulta la [Guida alla Creazione di Server/Client](docs/it/16-guida-creazione-server-client/) per un tutorial completo dalla teoria alla produzione.
+
+### Codice di condotta
+
+- Tratta tutti i partecipanti con rispetto e professionalita
+- Collaborazione costruttiva: feedback orientato al miglioramento
+- Nessuna discriminazione di alcun tipo
+- Mantieni le discussioni focalizzate sul progetto
+
+### Nota sulla licenza
+
+Inviando una Pull Request, accetti che i tuoi contributi saranno distribuiti sotto la licenza **AGPL-3.0**, alle stesse condizioni del progetto principale.
 
 ---
 ---
@@ -630,3 +689,82 @@ pnpm clean
 - **SQLite** (better-sqlite3) - Zero-configuration local storage
 - **Zod** - Runtime schema validation
 - **Node.js EventEmitter** - In-process event bus
+
+---
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+This means:
+- You can freely use, modify, and distribute this software
+- Any modifications or derivative works **must** be released under the same AGPL-3.0 license
+- If you run a modified version as a **network service** (SaaS), you must make the source code available to users of that service
+- You must retain copyright and license notices in all copies
+
+See the [LICENSE](LICENSE) file for the full license text.
+
+---
+
+## Contributing
+
+Contributions are welcome! This project grows thanks to its community.
+
+### Development setup
+
+```bash
+# Fork and clone the repository
+git clone https://github.com/<your-username>/mcp-suite.git
+cd mcp-suite
+
+# Install dependencies
+pnpm install
+
+# Run full build
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+### How to contribute
+
+- **Report bugs**: open an [issue](https://github.com/user/mcp-suite/issues) with a clear description, steps to reproduce, and expected behavior
+- **Propose features**: open an issue describing the feature, use case, and proposed approach
+- **Submit code**: follow the PR process below
+
+### Pull Request process
+
+1. Fork the repository
+2. Create a branch from `master`:
+   - `feature/feature-name` for new features
+   - `fix/bug-name` for bug fixes
+3. Write code following the project conventions
+4. Add or update tests for your changes
+5. Make sure `pnpm build` and `pnpm test` pass
+6. Commit with clear, descriptive messages
+7. Push the branch and open a Pull Request
+
+### Code conventions
+
+- **TypeScript** strict mode everywhere
+- Each server follows the uniform structure: `index.ts`, `server.ts`, `tools/`, `services/`, `collaboration.ts`
+- **EventBus** pattern: optional `eventBus?: EventBus` parameter, fire-and-forget publishing with `eventBus?.publish()`
+- **ClientManager** pattern: optional `clientManager?: McpClientManager` parameter for cross-server calls
+- Input validation with **Zod**
+- Storage with **SQLite** via `better-sqlite3`
+
+### Adding a new server
+
+See the [Server/Client Creation Guide](docs/en/16-server-client-creation-guide/) for a complete tutorial from theory to production.
+
+### Code of conduct
+
+- Treat all participants with respect and professionalism
+- Constructive collaboration: feedback oriented toward improvement
+- No discrimination of any kind
+- Keep discussions focused on the project
+
+### License note
+
+By submitting a Pull Request, you agree that your contributions will be distributed under the **AGPL-3.0** license, under the same terms as the main project.
