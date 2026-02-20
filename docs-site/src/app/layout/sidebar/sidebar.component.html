@@ -1,0 +1,29 @@
+<nav class="sidebar-nav" aria-label="Documentation navigation">
+  @if (manifest) {
+    @for (section of manifest.sections; track section.slug) {
+      <div class="section">
+        <button class="section-header" (click)="navService.toggleSection(section.slug)">
+          <mat-icon class="expand-icon" [class.expanded]="isSectionExpanded(section.slug)">
+            chevron_right
+          </mat-icon>
+          <span class="section-title">{{ section.title }}</span>
+        </button>
+        @if (isSectionExpanded(section.slug)) {
+          <mat-nav-list class="page-list" dense>
+            @for (page of section.pages; track page.slug) {
+              <a mat-list-item
+                [routerLink]="['/', localeService.currentLocale(), section.slug, page.slug]"
+                [class.active]="isCurrentPage(section.slug, page.slug)">
+                {{ page.title }}
+              </a>
+            }
+          </mat-nav-list>
+        }
+      </div>
+    }
+  } @else {
+    <div class="loading-placeholder">
+      <mat-icon>hourglass_empty</mat-icon>
+    </div>
+  }
+</nav>

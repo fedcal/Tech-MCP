@@ -1,0 +1,281 @@
+{
+  "locale": "en",
+  "sections": [
+    {
+      "slug": "01-introduction-to-mcp",
+      "title": "Introduction to MCP",
+      "pages": [
+        {
+          "slug": "01-what-is-mcp",
+          "title": "What is the Model Context Protocol (MCP)"
+        },
+        {
+          "slug": "02-mcp-primitives",
+          "title": "MCP Primitives: Tools, Resources, Prompts"
+        }
+      ]
+    },
+    {
+      "slug": "02-architecture",
+      "title": "Architecture",
+      "pages": [
+        {
+          "slug": "01-overview",
+          "title": "Architecture Overview"
+        },
+        {
+          "slug": "02-server-pattern",
+          "title": "The Server Pattern"
+        }
+      ]
+    },
+    {
+      "slug": "03-installation",
+      "title": "Installation",
+      "pages": [
+        {
+          "slug": "01-requirements",
+          "title": "Prerequisites and Installation"
+        },
+        {
+          "slug": "02-first-startup",
+          "title": "First Startup"
+        }
+      ]
+    },
+    {
+      "slug": "04-configuration",
+      "title": "Configuration",
+      "pages": [
+        {
+          "slug": "01-environment-variables",
+          "title": "Environment Variables and Configuration"
+        },
+        {
+          "slug": "02-claude-desktop",
+          "title": "Claude Desktop Configuration"
+        }
+      ]
+    },
+    {
+      "slug": "05-shared-packages",
+      "title": "Shared Packages",
+      "pages": [
+        {
+          "slug": "01-core",
+          "title": "@mcp-suite/core"
+        },
+        {
+          "slug": "02-event-bus",
+          "title": "@mcp-suite/event-bus"
+        },
+        {
+          "slug": "03-database",
+          "title": "@mcp-suite/database"
+        },
+        {
+          "slug": "04-testing-and-cli",
+          "title": "@mcp-suite/testing and @mcp-suite/cli"
+        },
+        {
+          "slug": "05-client-manager",
+          "title": "@mcp-suite/client-manager"
+        }
+      ]
+    },
+    {
+      "slug": "06-productivity-servers",
+      "title": "Productivity Servers",
+      "pages": [
+        {
+          "slug": "01-code-review",
+          "title": "Code Review Server"
+        },
+        {
+          "slug": "02-dependency-manager",
+          "title": "Dependency Manager Server"
+        },
+        {
+          "slug": "03-project-scaffolding",
+          "title": "Project Scaffolding Server"
+        }
+      ]
+    },
+    {
+      "slug": "07-devops-servers",
+      "title": "DevOps Servers",
+      "pages": [
+        {
+          "slug": "01-docker-compose",
+          "title": "Docker Compose Server"
+        },
+        {
+          "slug": "02-log-analyzer",
+          "title": "Log Analyzer Server"
+        },
+        {
+          "slug": "03-cicd-monitor",
+          "title": "CI/CD Monitor Server"
+        }
+      ]
+    },
+    {
+      "slug": "08-database-servers",
+      "title": "Database Servers",
+      "pages": [
+        {
+          "slug": "01-db-schema-explorer",
+          "title": "DB Schema Explorer Server"
+        }
+      ]
+    },
+    {
+      "slug": "09-documentation-servers",
+      "title": "Documentation Servers",
+      "pages": [
+        {
+          "slug": "01-api-documentation",
+          "title": "API Documentation Server"
+        },
+        {
+          "slug": "02-codebase-knowledge",
+          "title": "Codebase Knowledge Server"
+        }
+      ]
+    },
+    {
+      "slug": "10-testing-servers",
+      "title": "Testing Servers",
+      "pages": [
+        {
+          "slug": "01-test-generator",
+          "title": "Test Generator Server"
+        },
+        {
+          "slug": "02-performance-profiler",
+          "title": "Performance Profiler Server"
+        }
+      ]
+    },
+    {
+      "slug": "11-utility-servers",
+      "title": "Utility Servers",
+      "pages": [
+        {
+          "slug": "01-regex-builder",
+          "title": "Regex Builder Server"
+        },
+        {
+          "slug": "02-http-client",
+          "title": "HTTP Client Server"
+        },
+        {
+          "slug": "03-snippet-manager",
+          "title": "Snippet Manager Server"
+        }
+      ]
+    },
+    {
+      "slug": "12-project-management-servers",
+      "title": "Project Management Servers",
+      "pages": [
+        {
+          "slug": "01-scrum-board",
+          "title": "Scrum Board Server -- CENTRAL HUB"
+        },
+        {
+          "slug": "02-agile-metrics",
+          "title": "Agile Metrics Server"
+        },
+        {
+          "slug": "03-time-tracking",
+          "title": "Time Tracking Server"
+        },
+        {
+          "slug": "04-project-economics",
+          "title": "Project Economics Server"
+        },
+        {
+          "slug": "05-retrospective-manager",
+          "title": "Retrospective Manager Server"
+        }
+      ]
+    },
+    {
+      "slug": "13-communication-servers",
+      "title": "Communication Servers",
+      "pages": [
+        {
+          "slug": "01-standup-notes",
+          "title": "Standup Notes Server"
+        }
+      ]
+    },
+    {
+      "slug": "14-inter-server-collaboration",
+      "title": "Inter-Server Collaboration",
+      "pages": [
+        {
+          "slug": "01-event-bus",
+          "title": "EventBus: The Inter-Server Collaboration System"
+        },
+        {
+          "slug": "02-typed-events",
+          "title": "The 29 Typed Events"
+        },
+        {
+          "slug": "03-collaboration-matrix",
+          "title": "Collaboration Matrix"
+        },
+        {
+          "slug": "04-client-manager-wiring",
+          "title": "Client Manager Wiring: Synchronous Calls Between Servers"
+        }
+      ]
+    },
+    {
+      "slug": "15-future-developments",
+      "title": "Future Developments",
+      "pages": [
+        {
+          "slug": "01-roadmap",
+          "title": "Roadmap and Future Developments"
+        },
+        {
+          "slug": "02-contributing",
+          "title": "Contributing Guide"
+        }
+      ]
+    },
+    {
+      "slug": "16-server-client-creation-guide",
+      "title": "Server/Client Creation Guide",
+      "pages": [
+        {
+          "slug": "01-protocol-fundamentals",
+          "title": "Model Context Protocol Fundamentals"
+        },
+        {
+          "slug": "02-first-server",
+          "title": "Creating Your First MCP Server"
+        },
+        {
+          "slug": "03-first-client",
+          "title": "Creating Your First MCP Client"
+        },
+        {
+          "slug": "04-resources-prompts",
+          "title": "Resources and Prompts"
+        },
+        {
+          "slug": "05-http-transport",
+          "title": "HTTP Transport and Deployment"
+        },
+        {
+          "slug": "06-sqlite-persistence",
+          "title": "Persistence with SQLite"
+        }
+      ]
+    }
+  ]
+}

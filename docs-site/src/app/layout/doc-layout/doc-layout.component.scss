@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+.doc-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.doc-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 900px;
+}
+
+.doc-toc {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+@media (max-width: 1100px) {
+  .doc-toc {
+    display: none;
+  }
+}

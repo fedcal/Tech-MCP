@@ -1,0 +1,10 @@
+<nav class="toc" aria-label="Table of contents">
+  <h4>Contenuti</h4>
+  <ul>
+    @for (h of headings(); track h.id) {
+      <li [class.toc-h3]="h.level === 3">
+        <a [href]="'#' + h.id" (click)="scrollTo($event, h.id)">{{ h.text }}</a>
+      </li>
+    }
+  </ul>
+</nav>

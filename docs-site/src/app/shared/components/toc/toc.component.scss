@@ -1,0 +1,40 @@
+.toc {
+  padding: 1rem;
+  border-left: 2px solid var(--border-color, #e1e4e8);
+
+  h4 {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary, #6a737d);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+
+    a {
+      display: block;
+      padding: 0.2rem 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary, #6a737d);
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--primary-color, #3f51b5);
+      }
+    }
+
+    &.toc-h3 {
+      padding-left: 1rem;
+    }
+  }
+}

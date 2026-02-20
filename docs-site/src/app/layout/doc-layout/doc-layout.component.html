@@ -1,0 +1,11 @@
+<div class="doc-layout">
+  <article class="doc-content">
+    <ng-content />
+  </article>
+  @if (headings().length > 0) {
+    <aside class="doc-toc">
+      <app-toc [headings]="headings()" />
+    </aside>
+  }
+</div>
+<app-prev-next-nav [prev]="prev()" [next]="next()" />

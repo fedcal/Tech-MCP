@@ -1,0 +1,57 @@
+name: Deploy Documentation Site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'docs-site/**'
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: docs-site
+        run: npm ci
+
+      - name: Generate components from markdown
+        working-directory: docs-site
+        run: npx tsx scripts/build-docs.ts
+
+      - name: Build Angular (prerender)
+        working-directory: docs-site
+        run: npx ng build --configuration production
+
+      - name: Prepare deploy artifacts
+        run: |
+          cp docs-site/dist/docs-site/browser/index.html docs-site/dist/docs-site/browser/404.html
+          touch docs-site/dist/docs-site/browser/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs-site/dist/docs-site/browser
+
+      - uses: actions/deploy-pages@v4
+        id: deployment

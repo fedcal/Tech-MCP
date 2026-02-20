@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-toolbar {
+  background: var(--header-bg, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e1e4e8);
+  padding: 0 0.5rem;
+  height: 64px;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 0.5rem;
+
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+.nav-links {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.locale-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.serverCategories {
+  // Defined in component
+}

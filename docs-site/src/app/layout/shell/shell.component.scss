@@ -1,0 +1,19 @@
+.shell-container {
+  height: calc(100vh - 64px);
+}
+
+.sidebar {
+  width: 280px;
+  border-right: 1px solid var(--border-color, #e1e4e8);
+  background: var(--sidebar-bg, #fafbfc);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  main {
+    flex: 1;
+  }
+}

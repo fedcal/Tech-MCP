@@ -1,0 +1,26 @@
+@if (prev() || next()) {
+  <nav class="prev-next" aria-label="Page navigation">
+    <div class="prev-next-container">
+      @if (prev(); as p) {
+        <a [routerLink]="getLink(p)" class="nav-link prev" mat-stroked-button>
+          <mat-icon>arrow_back</mat-icon>
+          <span class="nav-text">
+            <small>Precedente</small>
+            <strong>{{ p.title }}</strong>
+          </span>
+        </a>
+      } @else {
+        <span></span>
+      }
+      @if (next(); as n) {
+        <a [routerLink]="getLink(n)" class="nav-link next" mat-stroked-button>
+          <span class="nav-text">
+            <small>Successivo</small>
+            <strong>{{ n.title }}</strong>
+          </span>
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+      }
+    </div>
+  </nav>
+}

@@ -1,0 +1,226 @@
+@use '@angular/material' as mat;
+
+// ===== Angular Material Theme =====
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+    ),
+    typography: Inter,
+    density: 0,
+  ));
+}
+
+// Dark theme override
+.dark-theme {
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+    ),
+    typography: Inter,
+    density: 0,
+  ));
+}
+
+// ===== CSS Custom Properties =====
+:root, .light-theme {
+  --primary-color: #3f51b5;
+  --bg-color: #ffffff;
+  --text-color: #24292e;
+  --text-secondary: #6a737d;
+  --border-color: #e1e4e8;
+  --inline-code-bg: #f6f8fa;
+  --code-bg: #f6f8fa;
+  --table-header-bg: #f6f8fa;
+  --table-stripe-bg: #fafbfc;
+  --blockquote-bg: #f6f8fa;
+  --blockquote-color: #6a737d;
+  --sidebar-bg: #fafbfc;
+  --sidebar-hover: #e8eaed;
+  --header-bg: #ffffff;
+}
+
+.dark-theme {
+  --primary-color: #7986cb;
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --text-secondary: #8b949e;
+  --border-color: #30363d;
+  --inline-code-bg: #161b22;
+  --code-bg: #161b22;
+  --table-header-bg: #161b22;
+  --table-stripe-bg: #0d1117;
+  --blockquote-bg: #161b22;
+  --blockquote-color: #8b949e;
+  --sidebar-bg: #010409;
+  --sidebar-hover: #161b22;
+  --header-bg: #0d1117;
+}
+
+// ===== Global Reset =====
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// ===== Doc Content Styles =====
+// Applied to markdown-rendered HTML inside doc pages
+.doc-content {
+  max-width: 900px;
+  line-height: 1.7;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  // Inline code
+  code:not([class*="hljs"]) {
+    background: var(--inline-code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  // Code blocks
+  pre {
+    margin: 1rem 0;
+    border-radius: 6px;
+    overflow-x: auto;
+
+    code {
+      display: block;
+      padding: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      background: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+    }
+  }
+
+  // Tables
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--table-header-bg);
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background: var(--table-stripe-bg);
+    }
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 4px solid var(--primary-color);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--blockquote-bg);
+    color: var(--blockquote-color);
+
+    p:last-child { margin-bottom: 0; }
+  }
+
+  // Lists
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  // Horizontal rules
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+  }
+
+  // Images
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  // Strong and emphasis
+  strong { font-weight: 600; }
+}
+
+// ===== Highlight.js theme override for dark =====
+.dark-theme {
+  .hljs {
+    background: #161b22 !important;
+    color: #c9d1d9;
+  }
+}

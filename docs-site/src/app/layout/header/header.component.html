@@ -1,0 +1,44 @@
+<mat-toolbar class="header-toolbar">
+  <button mat-icon-button (click)="navService.toggleSidebar()" aria-label="Toggle sidebar">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <a [routerLink]="['/', locale]" class="logo-link">
+    <span class="logo-text">MCP Suite</span>
+  </a>
+
+  <nav class="nav-links">
+    <a mat-button [routerLink]="['/', locale, '03-installazione', locale === 'it' ? '01-requisiti' : '01-requirements']">
+      {{ locale === 'it' ? 'Guida' : 'Guide' }}
+    </a>
+
+    <button mat-button [matMenuTriggerFor]="serverMenu">
+      Server <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #serverMenu="matMenu">
+      @for (cat of serverCategories; track cat.section) {
+        <a mat-menu-item [routerLink]="['/', locale, getSectionForLocale(cat), cat.firstPage]">
+          {{ locale === 'it' ? cat.labelIt : cat.labelEn }}
+        </a>
+      }
+    </mat-menu>
+
+    <a mat-button [routerLink]="['/', locale, locale === 'it' ? '16-guida-creazione-server-client' : '16-server-client-creation-guide', locale === 'it' ? '01-fondamenti-protocollo' : '01-protocol-fundamentals']">
+      Tutorial
+    </a>
+  </nav>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button (click)="switchLocale()" [attr.aria-label]="'Switch to ' + (locale === 'it' ? 'English' : 'Italiano')">
+    <span class="locale-badge">{{ locale === 'it' ? 'EN' : 'IT' }}</span>
+  </button>
+
+  <button mat-icon-button (click)="themeService.toggle()" aria-label="Toggle theme">
+    <mat-icon>{{ themeService.isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+
+  <a mat-icon-button href="https://github.com/fedcal/Tech-MCP" target="_blank" rel="noopener" aria-label="GitHub">
+    <mat-icon>code</mat-icon>
+  </a>
+</mat-toolbar>

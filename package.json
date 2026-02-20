@@ -15,7 +15,9 @@
     "format": "prettier --write '**/*.{ts,json,md}'",
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean",
-    "dev": "turbo run dev --parallel"
+    "dev": "turbo run dev --parallel",
+    "docs:dev": "cd docs-site && npm run start",
+    "docs:build": "cd docs-site && npm run build"
   },
   "devDependencies": {
     "@types/node": "^25.2.2",

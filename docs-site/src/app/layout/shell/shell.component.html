@@ -1,0 +1,16 @@
+<app-header />
+<mat-sidenav-container class="shell-container">
+  <mat-sidenav
+    [mode]="sidenavMode"
+    [opened]="navService.sidebarOpen()"
+    (openedChange)="navService.sidebarOpen.set($event)"
+    class="sidebar">
+    <app-sidebar />
+  </mat-sidenav>
+  <mat-sidenav-content class="main-content">
+    <main>
+      <router-outlet />
+    </main>
+    <app-footer />
+  </mat-sidenav-content>
+</mat-sidenav-container>

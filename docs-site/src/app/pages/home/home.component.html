@@ -1,0 +1,54 @@
+<div class="home-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">MCP Suite</h1>
+    <p class="hero-subtitle">
+      {{ locale() === 'it'
+        ? '30 Server MCP per Sviluppatori'
+        : '30 MCP Servers for Developers' }}
+    </p>
+    <p class="hero-tagline">
+      {{ locale() === 'it'
+        ? 'Una suite TypeScript completa per ogni fase del ciclo di sviluppo software. Gestione codice, Scrum/Agile, DevOps, database e utility - tutti comunicanti tramite eventi tipizzati.'
+        : 'A complete TypeScript suite for every phase of the software development lifecycle. Code management, Scrum/Agile, DevOps, database, and utilities - all communicating through typed events.' }}
+    </p>
+    <div class="hero-actions">
+      <a mat-raised-button color="primary"
+        [routerLink]="['/', locale(), locale() === 'it' ? '03-installazione' : '03-installation', locale() === 'it' ? '01-requisiti' : '01-requirements']">
+        {{ locale() === 'it' ? 'Inizia Subito' : 'Get Started' }}
+      </a>
+      <a mat-stroked-button
+        href="https://github.com/fedcal/Tech-MCP" target="_blank" rel="noopener">
+        <mat-icon>code</mat-icon>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <app-stats-banner />
+
+  <!-- Server Categories -->
+  <section class="categories">
+    <div class="categories-grid">
+      @for (cat of categories; track cat.sectionIt) {
+        <mat-card class="category-card" appearance="outlined">
+          <mat-card-header>
+            <mat-icon mat-card-avatar class="category-icon">{{ cat.icon }}</mat-icon>
+            <mat-card-title>{{ locale() === 'it' ? cat.titleIt : cat.titleEn }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ locale() === 'it' ? cat.descIt : cat.descEn }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button color="primary"
+              [routerLink]="['/', locale(), getSection(cat), cat.firstPage]">
+              {{ locale() === 'it' ? 'Scopri' : 'Explore' }}
+              <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  </section>
+</div>

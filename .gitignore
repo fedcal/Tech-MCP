@@ -39,3 +39,10 @@ coverage/
 
 # Logs
 *.log
+
+# docs-site generated files
+docs-site/src/app/pages/docs/
+docs-site/routes.txt
+docs-site/dist/
+docs-site/.angular/
+docs-site/node_modules/
