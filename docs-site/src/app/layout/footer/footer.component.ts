@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <div class="footer-content">
         <span>Released under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a> License</span>
         <span class="separator">|</span>
-        <span>Copyright &copy; 2024-{{ currentYear }} Federico Calo</span>
+        <span>Copyright &copy; 2024-{{ currentYear }} <a href="https://www.federicocalo.dev" target="_blank" rel="noopener">Federico Calo</a></span>
       </div>
     </footer>
   `,

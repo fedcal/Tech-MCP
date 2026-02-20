@@ -3,9 +3,6 @@ name: Deploy Documentation Site
 on:
   push:
     branches: [master]
-    paths:
-      - 'docs-site/**'
-      - 'docs/**'
   workflow_dispatch:
 
 permissions:

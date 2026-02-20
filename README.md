@@ -1,5 +1,10 @@
 [Italiano](#mcp-suite) | [English](#mcp-suite-en)
 
+[![Deploy Documentation Site](https://github.com/fedcal/Tech-MCP/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/fedcal/Tech-MCP/actions/workflows/deploy-docs.yml)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![GitHub Stars](https://img.shields.io/github/stars/fedcal/Tech-MCP)](https://github.com/fedcal/Tech-MCP/stargazers)
+[![Documentation](https://img.shields.io/badge/docs-federicocalo.dev-brightgreen)](https://www.federicocalo.dev)
+
 ---
 
 # MCP Suite
@@ -411,6 +416,11 @@ Inviando una Pull Request, accetti che i tuoi contributi saranno distribuiti sot
 ---
 
 <a id="mcp-suite-en"></a>
+
+[![Deploy Documentation Site](https://github.com/fedcal/Tech-MCP/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/fedcal/Tech-MCP/actions/workflows/deploy-docs.yml)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![GitHub Stars](https://img.shields.io/github/stars/fedcal/Tech-MCP)](https://github.com/fedcal/Tech-MCP/stargazers)
+[![Documentation](https://img.shields.io/badge/docs-federicocalo.dev-brightgreen)](https://www.federicocalo.dev)
 
 # MCP Suite (EN)
 
