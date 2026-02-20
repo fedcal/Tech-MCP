@@ -398,7 +398,7 @@ Consulta la [Guida alla Creazione di Server/Client](docs/it/16-guida-creazione-s
 
 ### Codice di condotta
 
-- Tratta tutti i partecipanti con rispetto e professionalita
+- Tratta tutti i partecipanti con rispetto e professionalita 
 - Collaborazione costruttiva: feedback orientato al miglioramento
 - Nessuna discriminazione di alcun tipo
 - Mantieni le discussioni focalizzate sul progetto
